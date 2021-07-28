@@ -1,4 +1,5 @@
 import * as React from "react";
+import { initLiveReload } from "./bootstrap";
 
 export function useRealtimeComponent(
   originalComponent: React.ComponentType,
@@ -43,6 +44,10 @@ export function useRealtimeComponent(
       }
     };
   }, [componentName]);
+
+  React.useEffect(() => {
+    initLiveReload();
+  }, []);
 
   return updatedInstance.current || originalComponent;
 }
