@@ -1,9 +1,7 @@
 import * as React from "react";
 // @ts-ignore
 import styles from "./Button.modules.css";
-
-// @ts-ignore
-const { addPropertyControls, ControlType } = window.Framer;
+import { addPropertyControls, ControlType } from "framer";
 
 interface Props {
   title: string;
@@ -17,12 +15,6 @@ export const Button = InnerButton;
 
 addPropertyControls(Button, {
   title: {
-    type: ControlType.String,
-  },
-  foo: {
-    type: ControlType.String,
-  },
-  bar: {
     type: ControlType.String,
   },
 });
