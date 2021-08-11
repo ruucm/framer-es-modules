@@ -71,6 +71,8 @@ export const Button: React.ComponentType = lib.Button
 export const Battery: React.ComponentType = lib.Battery
 ```
 
+Beware that esm was designed for many small files that the browser can cache and optimize for. If you make your library too big, you'll lose out on these advantages. But it's a trade-off.
+
 
 ## Deployment
 
