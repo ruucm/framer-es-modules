@@ -26,9 +26,9 @@ Open Framer, create a code file and paste the following:
 
 ```.tsx
 import { addPropertyControls, ControlType } from "framer"
-import { Button as ImportedButton } from "http://127.0.0.1:8000/index.js"
+import { Button } from "http://127.0.0.1:8000/index.js"
 
-export const Button: React.ComponentType = ImportedButton
+export default Button as React.ComponentType
 
 addPropertyControls(Button, {
     title: {
