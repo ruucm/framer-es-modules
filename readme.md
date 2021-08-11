@@ -53,6 +53,25 @@ If you forget to start your local server, your component will render with:
 Error in <name>.tsx Failed to Fetch
 ```
 
+If you want to import a whole library to expose multiple components you can export them like this. Because Framer uses static analysis to recognize components, you will need one line per exported component.
+
+```.tsx
+import { addPropertyControls, ControlType } from "framer"
+import * as lib from "http://127.0.0.1:8000/index.js"
+
+addPropertyControls(lib.Button, {
+    title: {
+        title: "Title",
+        type: ControlType.String,
+        defaultValue: "Title",
+    },
+})
+
+export const Button: React.ComponentType = lib.Button
+export const Battery: React.ComponentType = lib.Battery
+```
+
+
 ## Deployment
 
 Once you are ready to deploy your code, it should be uploaded to an https endpoint with a versioned url. We have set up a [Workflow](https://github.com/framer/example-framer-esm-setup/actions) to build the code and deploy to [GitHub Pages](https://github.com/framer/example-framer-esm-setup/tree/pages). To ship a next version you simply type:
