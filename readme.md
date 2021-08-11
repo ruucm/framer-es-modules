@@ -14,7 +14,7 @@ All the magic is in the `esmbuild` folder. Contributions are welcome.
 - CSS Modules plugin to support writing css scoped modules.
 - GitHub Workflow to deploy versioned code on GitHub pages.
 
-## 🏎 Quickstart
+## 🏁 Quickstart
 
 Start the development server with:
 
@@ -118,8 +118,7 @@ import { Button } from "./Button.js"
 
 ## Gotchas
 
-**Private code**: you should keep your source private, but not your built code. Make sure to enable `minify` in the `esmbuild.js` script to minify your code.
-
-**Assets**: you can host your assets (images, movies) anywhere you like and just use the full urls to use them in your components.
-
-**Auto refresh**: you currently have to manually reload your components to see changes in your development code. It should be doable to make an `esbuild` plugin that inserts a snippet to auto reload after changes. Contributions are welcome.
+- **Private code**: you should keep your source private, but not your built code. Make sure to enable `minify` in the `esmbuild.js` script to minify your code.
+- **Assets**: you can host your assets (images, movies) anywhere you like and just use the full urls to use them in your components.
+- **Auto refresh**: you currently have to manually reload your components to see changes in your development code. It should be doable to make an `esbuild` plugin that inserts a snippet to auto reload after changes. Contributions are welcome.
+- **Other build tools**: this is just an example setup, but you should be able to use Rollup, Webpack, SWC, etc. as long as you set the output format to `esm`.
